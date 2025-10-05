@@ -19,13 +19,13 @@
       }
       body {
         font-family: "MyanmarFont", "Padauk", "Inter", sans-serif;
-        background-color: #0a1128; /* ပိုနက်တဲ့ အပြာရောင် Dark BG */
+        background-color: #0a1128; /* အပြာနက်ရောင်ကို အဓိက နောက်ခံထားခြင်း */
         color: #e0e0e0;
       }
       .hero-bg {
         background-image: linear-gradient(
             to bottom,
-            rgba(10, 17, 40, 0.8),
+            rgba(10, 17, 40, 0.8), /* Dark Blue Opacity */
             rgba(10, 17, 40, 1)
           ),
           url("../dJPrGJUK8aED.com/1/11/367710/13568488/U7wLgfhwBNLF.jpg"); /* သင့်ပုံကို အစားထိုးပါ */
@@ -52,7 +52,6 @@
         -webkit-backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.1);
       }
-      /* Custom styles for the app screenshots and FAQ are kept for functionality */
       .faq-answer {
         max-height: 0;
         overflow: hidden;
@@ -179,21 +178,6 @@
         </div>
       </section>
 
-      <section id="screenshots" class="py-20 bg-black bg-opacity-20">
-        <div class="container mx-auto px-6">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-white">
-              App အတွင်းပိုင်း ဒီဇိုင်း
-            </h2>
-            <p class="text-gray-400 mt-2">
-              အသုံးပြုရလွယ်ကူပြီး သေသပ်လှပသော ဒီဇိုင်း
-            </p>
-          </div>
-          <div id="screenshot-slider" class="relative w-full max-w-4xl mx-auto h-[500px] overflow-hidden">
-            </div>
-        </div>
-      </section>
-
       <section id="pricing" class="py-20">
         <div class="container mx-auto px-6">
           <div class="text-center mb-12">
@@ -275,8 +259,95 @@
           </div>
         </div>
       </section>
-      
-      </main>
+
+      <section id="faq" class="py-20">
+        <div class="container mx-auto px-6 max-w-3xl">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
+              အမေးများသော မေးခွန်းများ (FAQ)
+            </h2>
+          </div>
+          <div class="space-y-4">
+            <div class="faq-item glass-card rounded-lg p-4">
+              <button class="faq-question w-full text-left flex justify-between items-center">
+                <span class="text-lg font-semibold">Premium Member ဘယ်လိုဝင်ရမလဲ?</span>
+                <i class="fas fa-chevron-down transition-transform"></i>
+              </button>
+              <div class="faq-answer pt-2 text-gray-400">
+                <p>
+                  Premium Member ဝင်ရန် အသေးစိတ်အချက်အလက်များကို
+                  <a href="./pages/how-to-member.html" class="text-red-400 underline">ဒီနေရာမှာ</a>
+                  ဝင်ရောက်ကြည့်ရှုနိုင်ပါတယ်ခင်ဗျာ။
+                </p>
+              </div>
+            </div>
+            <div class="faq-item glass-card rounded-lg p-4">
+              <button class="faq-question w-full text-left flex justify-between items-center">
+                <span class="text-lg font-semibold">ဘယ်လိုငွေချေစနစ်တွေနဲ့ ဝယ်လို့ရမလဲ?</span>
+                <i class="fas fa-chevron-down transition-transform"></i>
+              </button>
+              <div class="faq-answer pt-2 text-gray-400">
+                <p>
+                  KBZPay, WavePay အစရှိတဲ့ Mobile Banking အများစုနဲ့
+                  ငွေပေးချေနိုင်ပါတယ်။ အသေးစိတ်ကို Member ဝင်ရန် လမ်းညွှန်မှာ
+                  ကြည့်ရှုနိုင်ပါတယ်။
+                </p>
+              </div>
+            </div>
+            <div class="faq-item glass-card rounded-lg p-4">
+              <button class="faq-question w-full text-left flex justify-between items-center">
+                <span class="text-lg font-semibold">အကောင့်တစ်ခုကို Device ဘယ်နှလုံးမှာ သုံးနိုင်မလဲ?</span>
+                <i class="fas fa-chevron-down transition-transform"></i>
+              </button>
+              <div class="faq-answer pt-2 text-gray-400">
+                <p>
+                  လက်ရှိတွင် အကောင့်တစ်ခုကို Device နှစ်ခုမှာ
+                  အသုံးပြုနိုင်မှာဖြစ်ပါတယ်။
+                </p>
+              </div>
+            </div>
+            <div class="faq-item glass-card rounded-lg p-4">
+              <button class="faq-question w-full text-left flex justify-between items-center">
+                <span class="text-lg font-semibold">App ကို ဘယ်လိုသုံးရမလဲ?</span>
+                <i class="fas fa-chevron-down transition-transform"></i>
+              </button>
+              <div class="faq-answer pt-2 text-gray-400">
+                <p>
+                  App အသုံးပြုနည်း အသေးစိတ်ကို
+                  <a href="./pages/how-to-use.html" class="text-red-400 underline">ဒီနေရာမှာ</a>
+                  ဝင်ရောက်လေ့လာနိုင်ပါတယ်ခင်ဗျာ။
+                </p>
+              </div>
+            </div>
+            <div class="faq-item glass-card rounded-lg p-4">
+              <button class="faq-question w-full text-left flex justify-between items-center">
+                <span class="text-lg font-semibold">App ကို ဘယ် Platform တွေမှာ ရနိုင်မလဲ?</span>
+                <i class="fas fa-chevron-down transition-transform"></i>
+              </button>
+              <div class="faq-answer pt-2 text-gray-400">
+                <p>
+                  လက်ရှိမှာ Android ဖုန်းနဲ့ TV အတွက်ရရှိနိုင်ပြီး iOS, Desktop
+                  App များကို မကြာမီ ရရှိနိုင်ရန် စီစဉ်နေပါသည်။
+                </p>
+              </div>
+            </div>
+            <div class="faq-item glass-card rounded-lg p-4">
+              <button class="faq-question w-full text-left flex justify-between items-center">
+                <span class="text-lg font-semibold">ငွေပေးချေပြီးရင် ဘယ်လောက်ကြာကြာစောင့်ရမလဲ?</span>
+                <i class="fas fa-chevron-down transition-transform"></i>
+              </button>
+              <div class="faq-answer pt-2 text-gray-400">
+                <p>
+                  ငွေလွှဲအချက်အလက်များမှန်ကန်ပါက Admin team မှ
+                  အမြန်ဆုံးစစ်ဆေးပြီး approve လုပ်ပေးသွားမှာဖြစ်ပါတယ်။
+                  ပုံမှန်အားဖြင့် မိနစ်အနည်းငယ်မှ နာရီပိုင်းအတွင်း အဆင်ပြေပါသည်။
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <footer class="bg-black bg-opacity-40 py-12">
       <div class="container mx-auto px-6 text-center text-gray-400">
@@ -301,24 +372,6 @@
       mobileMenuButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
       });
-
-      // Screenshot Slider (The slider images need to be in the 'ss/' folder)
-      let currentSlide = 0;
-      const slides = document.querySelectorAll(".screenshot-slide");
-      const slideCount = slides.length;
-
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.style.opacity = i === index ? "1" : "0";
-        });
-      }
-
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slideCount;
-        showSlide(currentSlide);
-      }
-
-      setInterval(nextSlide, 3000); // Change slide every 3 seconds
 
       // FAQ Accordion
       const faqQuestions = document.querySelectorAll(".faq-question");
