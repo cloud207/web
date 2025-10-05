@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      Zkar - မြန်မာစာတန်းထိုး ဇာတ်ကားများ၊ Live TV နှင့် ဘောလုံးပွဲများ
+    </title>
+    <link rel="icon" href="imgs/logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: "MyanmarFont";
+        src: url("mm.ttf") format("truetype");
+      }
+      body {
+        font-family: "MyanmarFont", "Padauk", "Inter", sans-serif;
+        background-color: #0a1128; /* ပိုနက်တဲ့ အပြာရောင် Dark BG */
+        color: #e0e0e0;
+      }
+      .hero-bg {
+        background-image: linear-gradient(
+            to bottom,
+            rgba(10, 17, 40, 0.8),
+            rgba(10, 17, 40, 1)
+          ),
+          url("../dJPrGJUK8aED.com/1/11/367710/13568488/U7wLgfhwBNLF.jpg"); /* သင့်ပုံကို အစားထိုးပါ */
+        background-size: cover;
+        background-position: center;
+      }
+      /* BLUE/CYAN Gradient အရောင်များ အစားထိုးခြင်း */
+      .gradient-text {
+        background: linear-gradient(90deg, #38bdf8, #06b6d4); /* sky-400 to cyan-500 */
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .btn-primary {
+        background: linear-gradient(90deg, #38bdf8, #0ea5e9); /* sky-400 to blue-500 */
+        transition: all 0.3s ease;
+      }
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); /* အပြာရောင် Shadow */
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      /* Custom styles for the app screenshots and FAQ are kept for functionality */
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="antialiased">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-30 backdrop-blur-md">
+      <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 class="text-3xl font-bold gradient-text">Zkar</h1>
+        <nav class="hidden md:flex space-x-8 items-center">
+          <a href="#features" class="hover:text-cyan-400 transition">Features</a>
+          <a href="#pricing" class="hover:text-cyan-400 transition">Pricing</a>
+          <a href="#faq" class="hover:text-cyan-400 transition">FAQ</a>
+          <a href="https://play.google.com/store/apps/details?id=com.zkr.mm" target="_blank" class="btn-primary text-white font-bold py-2 px-4 rounded-full">
+            App ရယူရန်
+          </a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-90">
+        <a href="#features" class="block py-2 px-4 text-sm hover:bg-gray-800">Features</a>
+        <a href="#pricing" class="block py-2 px-4 text-sm hover:bg-gray-800">Pricing</a>
+        <a href="#faq" class="block py-2 px-4 text-sm hover:bg-gray-800">FAQ</a>
+        <a href="https://play.google.com/store/apps/details?id=com.zkr.mm" target="_blank" class="block py-4 px-4 text-center bg-blue-600 text-white font-bold">App ရယူရန်</a>
+      </div>
+    </header>
+
+    <main class="pt-20">
+      <section class="hero-bg min-h-screen flex items-center">
+        <div class="container mx-auto px-6 text-center">
+          <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+            သင်အကြိုက်ဆုံး
+            <span class="gradient-text">ရုပ်ရှင်ဇာတ်ကားများ၊</span><br>
+            <br>
+            Live TV များကို တစ်နေရာတည်းမှာ ကြည့်ရှုလိုက်ပါ။
+          </h2>
+          <br>
+          <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            မြန်မာစာတန်းထိုး ရုပ်ရှင်၊ ဇာတ်လမ်းတွဲများ၊ ဘောလုံးပွဲများနှင့်
+            နိုင်ငံတကာ Live TV များကို Android Phone နှင့် TV တွင် အဆင်ပြေပြေ
+            ကြည့်ရှုနိုင်ပါပြီ။
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="https://play.google.com/store/apps/details?id=com.zkr.mm" target="_blank" class="w-full sm:w-auto btn-primary text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-2">
+              <i class="fab fa-google-play"></i>
+              <span>Play Store မှ ရယူရန်</span>
+            </a>
+            <a href="./tv.apk" class="w-full sm:w-auto bg-gray-700 hover:bg-cyan-500 text-white font-bold py-4 px-8 rounded-full flex items-center justify-center gap-2 transition">
+              <i class="fas fa-tv"></i>
+              <span>Android TV အတွက် ရယူရန်</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
+              ဘာကြောင့် Zkar ကို ရွေးချယ်သင့်လဲ?
+            </h2>
+            <p class="text-gray-400 mt-2">
+              ကျွန်ုပ်တို့ App ရဲ့ အကောင်းဆုံး Feature များ
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-2xl text-center">
+              <i class="fas fa-film text-4xl gradient-text mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">အဆုံးမဲ့ ဇာတ်လမ်းများ</h3>
+              <p class="text-gray-400">
+                မြန်မာစာတန်းထိုး ရုပ်ရှင်၊ ဇာတ်လမ်းတွဲ နှင့် 18+
+                ဇာတ်ကားပေါင်းများစွာကို စိတ်ကြိုက်ကြည့်ရှုနိုင်ခြင်း။
+              </p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl text-center">
+              <i class="fas fa-futbol text-4xl gradient-text mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">Live ဘောလုံးပွဲများ</h3>
+              <p class="text-gray-400">
+                ကမ္ဘာ့ထိပ်တန်း ဘောလုံးပွဲများနှင့် အခြား Live Stream များကို
+                တိုက်ရိုက်ကြည့်ရှုနိုင်ခြင်း။
+              </p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl text-center">
+              <i class="fas fa-tv text-4xl gradient-text mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">
+                Device စုံလင်စွာ အသုံးပြုနိုင်မှု
+              </h3>
+              <p class="text-gray-400">
+                သင်၏ Android Phone, Tablet နှင့် Android TV တို့တွင် အဆင်ပြေပြေ
+                အသုံးပြုနိုင်ခြင်း။
+              </p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl text-center">
+              <i class="fas fa-download text-4xl gradient-text mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">
+                Download ဆွဲပြီး ကြည့်ရှုနိုင်ခြင်း
+              </h3>
+              <p class="text-gray-400">
+                အင်တာနက်မရှိချိန်တွင် ကြည့်ရှုနိုင်ရန် ဇာတ်လမ်းများကို Download
+                ဆွဲထားနိုင်ခြင်း။
+              </p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl text-center">
+              <i class="fas fa-star text-4xl gradient-text mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">Premium Experience</h3>
+              <p class="text-gray-400">
+                Premium Member များအတွက် ဇာတ်လမ်းအားလုံးကို ကြော်ငြာမပါဘဲ
+                ကြည့်ရှုနိုင်ခြင်း။
+              </p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl text-center">
+              <i class="fas fa-language text-4xl gradient-text mb-4"></i>
+              <h3 class="text-xl font-bold mb-2">မြန်မာစာတန်းထိုး</h3>
+              <p class="text-gray-400">
+                ဇာတ်လမ်းအားလုံးနီးပါးကို အရည်အသွေးကောင်းမွန်သော
+                မြန်မာစာတန်းထိုးဖြင့် ကြည့်ရှုနိုင်ခြင်း။
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="screenshots" class="py-20 bg-black bg-opacity-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
+              App အတွင်းပိုင်း ဒီဇိုင်း
+            </h2>
+            <p class="text-gray-400 mt-2">
+              အသုံးပြုရလွယ်ကူပြီး သေသပ်လှပသော ဒီဇိုင်း
+            </p>
+          </div>
+          <div id="screenshot-slider" class="relative w-full max-w-4xl mx-auto h-[500px] overflow-hidden">
+            </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white">
+              Premium Member ကြေးများ
+            </h2>
+            <p class="text-gray-400 mt-2">
+              သင့်အတွက် အဆင်ပြေဆုံး Plan ကို ရွေးချယ်လိုက်ပါ
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="glass-card p-8 rounded-2xl border-2 border-transparent hover:border-cyan-400 transition-all duration-300 transform hover:scale-105">
+              <h3 class="text-2xl font-bold text-center">၁ လ</h3>
+              <p class="text-4xl font-extrabold text-center my-6 gradient-text">
+                ၆,၀၀၀ <span class="text-lg text-gray-300">ကျပ်</span>
+              </p>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>ဇာတ်လမ်းအားလုံး ကြည့်ရှုနိုင်မည်
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>Download ဆွဲနိုင်မည်
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>ကြော်ငြာများမပါဝင်ပါ
+                </li>
+              </ul>
+              <a href="./pages/how-to-member.html" class="block w-full text-center mt-8 bg-gray-700 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-full transition">
+                မန်ဘာဝင်ရန်
+              </a>
+            </div>
+            <div class="glass-card p-8 rounded-2xl border-2 border-cyan-400 relative transform scale-105 shadow-xl shadow-cyan-900/50">
+              <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-cyan-500 text-white text-xs font-bold px-3 py-1 rounded-full">လူကြိုက်အများဆုံး</span>
+              <h3 class="text-2xl font-bold text-center">၃ လ</h3>
+              <p class="text-4xl font-extrabold text-center my-6 gradient-text">
+                ၁၈,၀၀၀ <span class="text-lg text-gray-300">ကျပ်</span>
+              </p>
+              <p class="text-center font-bold text-green-400 mb-4">
+                + ၁၅ ရက် အပိုလက်ဆောင်
+              </p>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>ဇာတ်လမ်းအားလုံး ကြည့်ရှုနိုင်မည်
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>Download ဆွဲနိုင်မည်
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>ကြော်ငြာများမပါဝင်ပါ
+                </li>
+              </ul>
+              <a href="./pages/how-to-member.html" class="block w-full text-center mt-8 btn-primary text-white font-bold py-3 px-6 rounded-full">
+                မန်ဘာဝင်ရန်
+              </a>
+            </div>
+            <div class="glass-card p-8 rounded-2xl border-2 border-transparent hover:border-cyan-400 transition-all duration-300 transform hover:scale-105">
+              <h3 class="text-2xl font-bold text-center">၆ လ</h3>
+              <p class="text-4xl font-extrabold text-center my-6 gradient-text">
+                ၃၆,၀၀၀ <span class="text-lg text-gray-300">ကျပ်</span>
+              </p>
+              <p class="text-center font-bold text-green-400 mb-4">
+                + ရက် ၃၀ အပိုလက်ဆောင်
+              </p>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>ဇာတ်လမ်းအားလုံး ကြည့်ရှုနိုင်မည်
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>Download ဆွဲနိုင်မည်
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-green-500 mr-2"></i>ကြော်ငြာများမပါဝင်ပါ
+                </li>
+              </ul>
+              <a href="./pages/how-to-member.html" class="block w-full text-center mt-8 bg-gray-700 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-full transition">
+                မန်ဘာဝင်ရန်
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      </main>
+
+    <footer class="bg-black bg-opacity-40 py-12">
+      <div class="container mx-auto px-6 text-center text-gray-400">
+        <h2 class="text-2xl font-bold gradient-text mb-4">Zkar</h2>
+        <div class="flex justify-center space-x-6 mb-6">
+          <a href="https://www.facebook.com/zkarfans" target="_blank" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-facebook"></i></a>
+          <a href="https://t.me/zkarapp" target="_blank" class="text-2xl hover:text-cyan-400 transition"><i class="fab fa-telegram"></i></a>
+          <a href="mailto:contact@zkar.org" class="text-2xl hover:text-cyan-400 transition"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="flex justify-center space-x-6 mb-6">
+          <a href="./pages/how-to-member.html" class="hover:text-white transition">မန်ဘာဝင်ရန်</a>
+          <a href="./pages/how-to-use.html" class="hover:text-white transition">အသုံးပြုနည်း</a>
+        </div>
+        <p>© 2024 Zkar App. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Screenshot Slider (The slider images need to be in the 'ss/' folder)
+      let currentSlide = 0;
+      const slides = document.querySelectorAll(".screenshot-slide");
+      const slideCount = slides.length;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.style.opacity = i === index ? "1" : "0";
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        showSlide(currentSlide);
+      }
+
+      setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+      // FAQ Accordion
+      const faqQuestions = document.querySelectorAll(".faq-question");
+      faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+          const answer = question.nextElementSibling;
+          const icon = question.querySelector("i");
+
+          if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+            icon.style.transform = "rotate(0deg)";
+          } else {
+            // Close other open answers
+            document.querySelectorAll(".faq-answer").forEach((ans) => {
+              if (ans.style.maxHeight) {
+                ans.style.maxHeight = null;
+                ans.previousElementSibling.querySelector("i").style.transform =
+                  "rotate(0deg)";
+              }
+            });
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            icon.style.transform = "rotate(180deg)";
+          }
+        });
+      });
+    </script>
+  
+</body>
+</html>
