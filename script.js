@@ -7,11 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // အတွင်းထည့်ပြီး ကော်မာ (,) ဖြင့်ခြားပေးပါ။
     // =================================================================
     const accessKeys = [
-        'ss://your-first-outline-key-here',
-        'ss://your-second-outline-key-here',
-        'ss://your-third-outline-key-here',
-        // လိုအပ်သလောက် Key များကို ဒီမှာထပ်ထည့်နိုင်ပါတယ်
-    ];
+    'ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTp2U1RzYmlkSnV0@123.45.67.89:12345/?outline=1',
+    'ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpBSE5HbG5LZmFv@123.45.67.90:54321/?outline=1',
+    'ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpTYW9rc3dRbkVu@123.45.67.91:11223/?outline=1'
+];
 
     // Get references to HTML elements
     const getKeyBtn = document.getElementById('getKeyBtn');
