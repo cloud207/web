@@ -6,6 +6,8 @@
     <title>အခမဲ့ Outline VPN Keys - မြန်မာနိုင်ငံအတွက်</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://challenges.cloudflare.com/turnstile/v2/api.js" async defer></script>
 </head>
 <body>
 
@@ -34,8 +36,8 @@
                     </ul>
                 </li>
                 <li>
-                    <strong>Access Key ရယူပါ</strong>
-                    <p>အောက်က "Access Key ရယူရန်" ခလုတ်ကိုနှိပ်ပြီး Key ကိုရယူပါ။</p>
+                    <strong>လူသားဖြစ်ကြောင်း အတည်ပြုပါ</strong>
+                    <p>အောက်က အကွက်မှာ လူသားဖြစ်ကြောင်း အတည်ပြုပြီးမှ Key တောင်းယူရန် ခလုတ်ပေါ်လာပါမည်။</p>
                 </li>
                 <li>
                     <strong>Key ကို App ထဲထည့်ပါ</strong>
@@ -45,7 +47,19 @@
         </section>
 
         <section id="key-generator">
-            <button id="getKeyBtn">Access Key ရယူရန်</button>
+            <div class="turnstile-container">
+                <p>သင်ဟာလူသားတစ်ယောက်ဖြစ်ကြောင်း သက်သေပြရန် အောက်ပါအကွက်ကို နှိပ်ပါ။</p>
+                
+                <div class="cf-turnstile" 
+                     data-sitekey="YOUR_SITE_KEY_HERE" 
+                     data-callback="onTurnstileSuccess">
+                </div>
+                
+                <p class="turnstile-wait">Loading Cloudflare Turnstile widget. Please wait...</p>
+            </div>
+
+            <button id="getKeyBtn" class="hidden">Access Key ရယူရန်</button>
+            
             <div id="key-display" class="hidden">
                 <p><strong>သင့်အတွက် Access Key:</strong></p>
                 <div class="key-box">
@@ -54,7 +68,7 @@
                 </div>
             </div>
         </section>
-
+        
         <section id="notes">
             <h2>⚠️ အရေးကြီးမှတ်ချက်</h2>
             <ul>
