@@ -1,0 +1,173 @@
+/* Google Font for Myanmar Language */
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Padauk', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    line-height: 1.8;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: #005c99;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #555;
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+h2 {
+    color: #007acc;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 4px solid #007acc;
+    padding-left: 10px;
+}
+
+p, li {
+    font-size: 1em;
+    color: #444;
+}
+
+a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section ol, section ul {
+    padding-left: 20px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+#key-generator {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* Main Button Style */
+#getKeyBtn {
+    background-color: #007acc;
+    color: white;
+    font-family: 'Padauk', sans-serif;
+    font-size: 1.1em;
+    font-weight: 700;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#getKeyBtn:hover {
+    background-color: #005c99;
+    transform: translateY(-2px);
+}
+
+#key-display {
+    margin-top: 20px;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #bde0fe;
+}
+
+.key-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    word-break: break-all; /* Ensure long keys wrap */
+}
+
+#accessKeyText {
+    font-family: 'Courier New', Courier, monospace;
+    color: #c7254e;
+    white-space: pre-wrap; /* Allow key to wrap */
+    text-align: left;
+}
+
+#copyBtn {
+    background-color: #28a745;
+    color: white;
+    font-family: 'Padauk', sans-serif;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+#copyBtn:hover {
+    background-color: #218838;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #777;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .key-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #copyBtn {
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
+    }
+}
