@@ -13,12 +13,45 @@ document.addEventListener('DOMContentLoaded', () => {
         // လိုအပ်သလောက် Key များကို ဒီမှာထပ်ထည့်နိုင်ပါတယ်
     ];
 
-    // Get references to HTML elements
+    // Get references to HTML elements for VPN functionality
     const getKeyBtn = document.getElementById('getKeyBtn');
     const keyDisplay = document.getElementById('key-display');
     const accessKeyText = document.getElementById('accessKeyText');
     const copyBtn = document.getElementById('copyBtn');
+    
+    // Get references to HTML elements for Theme Switcher (NEW)
+    const themeToggle = document.getElementById('theme-toggle');
 
+    // ====== THEME SWITCHER LOGIC (NEW) ======
+    // Function to set the theme
+    const setTheme = (isDark) => {
+        if (isDark) {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+        }
+    };
+
+    // Check for saved theme in localStorage when the page loads
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        themeToggle.checked = true;
+        setTheme(true);
+    } else {
+        themeToggle.checked = false;
+        setTheme(false);
+    }
+
+    // Event listener for the theme toggle switch
+    themeToggle.addEventListener('change', () => {
+        setTheme(themeToggle.checked);
+    });
+    // =========================================
+
+
+    // ====== VPN KEY GENERATOR LOGIC (Existing) ======
     // Event listener for the "Get Key" button
     getKeyBtn.addEventListener('click', () => {
         if (accessKeys.length > 0) {
@@ -36,31 +69,26 @@ document.addEventListener('DOMContentLoaded', () => {
             getKeyBtn.textContent = 'နောက်ထပ် Key တစ်ခုရယူရန်';
         } else {
             // Handle case where no keys are available
-            accessKeyText.textContent = ' দুঃখিত, বর্তমানে কোনো কী উপলব্ধ নেই।';
+            accessKeyText.textContent = 'တောင်းပန်ပါတယ်၊ ယခုလက်ရှိ Key မရှိသေးပါ။';
             keyDisplay.classList.remove('hidden');
         }
     });
 
     // Event listener for the "Copy" button
     copyBtn.addEventListener('click', () => {
-        // Get the key text to copy
         const keyToCopy = accessKeyText.textContent;
 
-        // Use the modern Navigator Clipboard API to copy text
         navigator.clipboard.writeText(keyToCopy).then(() => {
-            // Provide visual feedback to the user
             const originalText = copyBtn.textContent;
             copyBtn.textContent = 'ကူးယူပြီးပါပြီ!';
-            copyBtn.style.backgroundColor = '#17a2b8'; // Change color to info blue
+            copyBtn.style.backgroundColor = '#17a2b8';
 
-            // Reset the button text after 2 seconds
             setTimeout(() => {
                 copyBtn.textContent = originalText;
-                copyBtn.style.backgroundColor = '#28a745'; // Reset to original green
+                copyBtn.style.backgroundColor = '#28a745';
             }, 2000);
         }).catch(err => {
             console.error('Failed to copy text: ', err);
-            // You could show an error message to the user here
         });
     });
 });
