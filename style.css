@@ -1,6 +1,38 @@
 /* Google Font for Myanmar Language */
 @import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
 
+/* ====== COLOR VARIABLES ====== */
+:root {
+    --bg-color: #f4f7f9;
+    --container-bg: #ffffff;
+    --text-color: #333;
+    --text-secondary-color: #555;
+    --border-color: #e0e0e0;
+    --primary-color: #007acc;
+    --primary-hover-color: #005c99;
+    --key-box-bg: #e9ecef;
+    --key-box-border: #bde0fe;
+    --key-text-color: #c7254e;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --transition-speed: 0.3s;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --container-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --text-secondary-color: #aaaaaa;
+    --border-color: #3a3a3a;
+    --primary-color: #269aff;
+    --primary-hover-color: #53b5ff;
+    --key-box-bg: #2c2c2c;
+    --key-box-border: #444;
+    --key-text-color: #ff80a6;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+}
+/* ============================= */
+
+
 /* Basic Reset */
 * {
     margin: 0;
@@ -10,56 +42,59 @@
 
 body {
     font-family: 'Padauk', sans-serif;
-    background-color: #f4f7f9;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.8;
     display: flex;
     justify-content: center;
     padding: 20px;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
 }
 
 .container {
     max-width: 800px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--container-bg);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px var(--shadow-color);
+    transition: background-color var(--transition-speed);
+    position: relative;
 }
 
 header {
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 20px;
 }
 
 h1 {
-    color: #005c99;
+    color: var(--primary-color);
     font-weight: 700;
 }
 
 .subtitle {
-    color: #555;
+    color: var(--text-secondary-color);
     font-size: 1.1em;
     margin-top: 10px;
 }
 
 h2 {
-    color: #007acc;
+    color: var(--primary-color);
     margin-top: 30px;
     margin-bottom: 15px;
-    border-left: 4px solid #007acc;
+    border-left: 4px solid var(--primary-color);
     padding-left: 10px;
 }
 
 p, li {
     font-size: 1em;
-    color: #444;
+    color: var(--text-color);
 }
 
 a {
-    color: #007acc;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 700;
 }
@@ -81,9 +116,8 @@ section li {
     margin: 40px 0;
 }
 
-/* Main Button Style */
 #getKeyBtn {
-    background-color: #007acc;
+    background-color: var(--primary-color);
     color: white;
     font-family: 'Padauk', sans-serif;
     font-size: 1.1em;
@@ -92,37 +126,37 @@ section li {
     padding: 12px 25px;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color var(--transition-speed), transform 0.2s ease;
 }
 
 #getKeyBtn:hover {
-    background-color: #005c99;
+    background-color: var(--primary-hover-color);
     transform: translateY(-2px);
 }
 
 #key-display {
     margin-top: 20px;
-    background-color: #f0f8ff;
+    background-color: var(--key-box-bg);
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid #bde0fe;
+    border: 1px solid var(--key-box-border);
 }
 
 .key-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e9ecef;
+    background-color: var(--bg-color);
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px;
-    word-break: break-all; /* Ensure long keys wrap */
+    word-break: break-all;
 }
 
 #accessKeyText {
     font-family: 'Courier New', Courier, monospace;
-    color: #c7254e;
-    white-space: pre-wrap; /* Allow key to wrap */
+    color: var(--key-text-color);
+    white-space: pre-wrap;
     text-align: left;
 }
 
@@ -135,7 +169,7 @@ section li {
     border-radius: 5px;
     cursor: pointer;
     margin-left: 10px;
-    transition: background-color 0.3s;
+    transition: background-color var(--transition-speed);
 }
 
 #copyBtn:hover {
@@ -150,24 +184,85 @@ footer {
     text-align: center;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--border-color);
     color: #777;
 }
+
+/* ====== THEME SWITCHER STYLES (NEW) ====== */
+.theme-switcher {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+}
+.theme-switcher span {
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+/* ========================================= */
+
 
 /* Responsive Design for Mobile */
 @media (max-width: 600px) {
     .container {
         padding: 20px;
     }
-
     .key-box {
         flex-direction: column;
         align-items: stretch;
     }
-
     #copyBtn {
         margin-top: 10px;
         margin-left: 0;
         width: 100%;
+    }
+    .theme-switcher {
+        position: static;
+        justify-content: flex-end;
+        margin-bottom: 15px;
     }
 }
