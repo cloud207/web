@@ -15,10 +15,8 @@
     --primary-text-color: #e0e0e0;
     --secondary-text-color: #aaaaaa;
     --border-color: #444444;
-    --primary-accent-color: #58a6ff; /* A nice, bright blue */
-    --secondary-accent-color: #38bdf8; /* A lighter cyan/sky blue */
-    --key-text-color: #ffd580; /* A pleasant light gold/yellow for the key */
-    --success-color: #28a745;
+    --primary-accent-color: #58a6ff;
+    --secondary-accent-color: #38bdf8;
 }
 
 body {
@@ -89,74 +87,35 @@ section li {
     margin-bottom: 10px;
 }
 
-#key-generator {
+/* Main action button for Telegram link */
+#get-key-section {
     text-align: center;
     margin: 40px 0;
+    padding: 30px;
+    background-color: #333;
+    border-radius: 8px;
 }
 
-/* Main Button Style */
-#getKeyBtn {
+.action-button {
+    display: inline-block;
     background-color: var(--primary-accent-color);
-    color: #111; /* Dark text for better contrast on bright blue */
+    color: #111;
     font-family: 'Padauk', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 700;
     border: none;
-    padding: 12px 25px;
+    padding: 15px 30px;
     border-radius: 8px;
     cursor: pointer;
+    text-decoration: none;
+    margin-top: 15px;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#getKeyBtn:hover {
+.action-button:hover {
     background-color: #80bfff;
     transform: translateY(-2px);
-}
-
-#key-display {
-    margin-top: 20px;
-    background-color: #222; /* Slightly different dark shade */
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-}
-
-.key-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--bg-color); /* Match the main background */
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    word-break: break-all;
-}
-
-#accessKeyText {
-    font-family: 'Courier New', Courier, monospace;
-    color: var(--key-text-color);
-    white-space: pre-wrap;
-    text-align: left;
-}
-
-#copyBtn {
-    background-color: var(--success-color);
-    color: white;
-    font-family: 'Padauk', sans-serif;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
-    transition: background-color 0.3s;
-}
-
-#copyBtn:hover {
-    background-color: #218838;
-}
-
-.hidden {
-    display: none;
+    text-decoration: none;
 }
 
 footer {
@@ -171,16 +130,5 @@ footer {
 @media (max-width: 600px) {
     .container {
         padding: 20px;
-    }
-
-    .key-box {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    #copyBtn {
-        margin-top: 10px;
-        margin-left: 0;
-        width: 100%;
     }
 }
