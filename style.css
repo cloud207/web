@@ -19,6 +19,20 @@
     --secondary-accent-color: #38bdf8;
 }
 
+/* Glow Animation for the button */
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 5px rgba(88, 166, 255, 0.3), 0 0 10px rgba(88, 166, 255, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(88, 166, 255, 0.6), 0 0 30px rgba(88, 166, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(88, 166, 255, 0.3), 0 0 10px rgba(88, 166, 255, 0.2);
+    }
+}
+
+
 body {
     font-family: 'Padauk', sans-serif;
     background-color: var(--bg-color);
@@ -87,36 +101,44 @@ section li {
     margin-bottom: 10px;
 }
 
-/* Main action button for Telegram link */
+/* Main action button section - UPDATED */
 #get-key-section {
     text-align: center;
     margin: 40px 0;
     padding: 30px;
-    background-color: #333;
-    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+    border-radius: 12px;
+    border: 1px solid var(--secondary-accent-color); /* Added border */
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); /* Added section glow */
 }
 
+/* Main action button for Telegram link - UPDATED */
 .action-button {
     display: inline-block;
     background-color: var(--primary-accent-color);
-    color: #111;
+    color: #0d1117; /* Darker text for better contrast */
     font-family: 'Padauk', sans-serif;
     font-size: 1.2em;
     font-weight: 700;
-    border: none;
     padding: 15px 30px;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
-    margin-top: 15px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+    border: 2px solid #80bfff; /* Added border */
+    box-shadow: 0 0 5px rgba(88, 166, 255, 0.3), 0 0 10px rgba(88, 166, 255, 0.2); /* Initial glow */
+    animation: pulse-glow 4s infinite ease-in-out; /* Added pulsing animation */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .action-button:hover {
     background-color: #80bfff;
-    transform: translateY(-2px);
+    transform: translateY(-3px); /* Increased hover effect */
     text-decoration: none;
+    box-shadow: 0 0 25px rgba(88, 166, 255, 0.8), 0 0 40px rgba(88, 166, 255, 0.6); /* Enhanced glow on hover */
+    animation: none; /* Pause animation on hover */
 }
+
 
 footer {
     text-align: center;
