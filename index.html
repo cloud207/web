@@ -6,8 +6,6 @@
     <title>အခမဲ့ Outline VPN Keys - မြန်မာနိုင်ငံအတွက်</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
-    
-    <script src="https://challenges.cloudflare.com/turnstile/v0/g/e9c9e9d67513/api.js" async defer></script>
 </head>
 <body>
 
@@ -23,6 +21,16 @@
                 ဒါက သာမန် VPN တွေနဲ့မတူဘဲ ကိုယ်ပိုင်ဆာဗာကို အသုံးပြုထားတဲ့အတွက် ပိုမိုလုံခြုံ၊ ပိုမိုမြန်ဆန်ပြီး တော်ရုံနဲ့ Block လုပ်မရပါဘူး။ သင်၏ privacy ကို ကာကွယ်ပေးပြီး အင်တာနက်ကို လွတ်လပ်စွာအသုံးပြုနိုင်စေပါတယ်။
             </p>
         </section>
+        
+        <section id="get-key-section">
+            <h2>🔑 Access Key ရယူရန်</h2>
+            <p>
+                Key အသစ်များရယူရန် အောက်ပါခလုတ်ကိုနှိပ်ပြီး ကျွန်ုပ်တို့၏ Telegram Bot သို့ သွားရောက်ပါ။ Bot မှတဆင့် Key များကို လွယ်ကူလျင်မြန်စွာ ရယူနိုင်ပါသည်။
+            </p>
+            <a href="https://t.me/LanPyaKyalBot" target="_blank" class="action-button">
+                Telegram Bot မှ Key ရယူရန်
+            </a>
+        </section>
 
         <section id="how-to-use">
             <h2>👇 အသုံးပြုနည်း အဆင့်ဆင့်</h2>
@@ -36,45 +44,21 @@
                     </ul>
                 </li>
                 <li>
-                    <strong>လူသားဖြစ်ကြောင်း အတည်ပြုပါ</strong>
-                    <p>အောက်က အကွက်မှာ လူသားဖြစ်ကြောင်း အတည်ပြုပြီးမှ Key တောင်းယူရန် ခလုတ်ပေါ်လာပါမည်။</p>
+                    <strong>Access Key ရယူပါ</strong>
+                    <p>အပေါ်က ခလုတ်ကိုနှိပ်ပြီး Telegram Bot ဆီမှ Key ကို ရယူပါ။</p>
                 </li>
                 <li>
                     <strong>Key ကို App ထဲထည့်ပါ</strong>
-                    <p>ရလာတဲ့ `ss://` နဲ့စတဲ့ Key ကို Copy ကူးပါ။ Outline App ကိုဖွင့်လိုက်တာနဲ့ Copy ကူးထားတဲ့ Key ကို အလိုအလျောက်တွေ့ပြီး "Add Server" လို့ပေါ်လာပါမယ်။ ဒါမှမဟုတ် (+) ကိုနှိပ်ပြီး ကူးလာတဲ့ Key ကို Paste လုပ်ပါ။ ပြီးရင် "Connect" ကိုနှိပ်ပြီး စတင်အသုံးပြုနိုင်ပါပြီ။</p>
+                    <p>Bot က ပို့ပေးလိုက်တဲ့ `ss://` နဲ့စတဲ့ Key ကို Copy ကူးပါ။ Outline App ကိုဖွင့်လိုက်တာနဲ့ Copy ကူးထားတဲ့ Key ကို အလိုအလျောက်တွေ့ပြီး "Add Server" လို့ပေါ်လာပါမယ်။ ဒါမှမဟုတ် (+) ကိုနှိပ်ပြီး ကူးလာတဲ့ Key ကို Paste လုပ်ပါ။ ပြီးရင် "Connect" ကိုနှိပ်ပြီး စတင်အသုံးပြုနိုင်ပါပြီ။</p>
                 </li>
             </ol>
         </section>
 
-        <section id="key-generator">
-            <div class="turnstile-container">
-                <p>သင်ဟာလူသားတစ်ယောက်ဖြစ်ကြောင်း သက်သေပြရန် အောက်ပါအကွက်ကို နှိပ်ပါ။</p>
-                
-                <div class="cf-turnstile" 
-                     data-sitekey="0x4AAAAAAB79tI5DOxsdK_b3" 
-                     data-callback="onTurnstileSuccess">
-                </div>
-                
-                <p class="turnstile-wait">Loading Cloudflare Turnstile widget. Please wait...</p>
-            </div>
-
-            <button id="getKeyBtn" class="hidden">Access Key ရယူရန်</button>
-            
-            <div id="key-display" class="hidden">
-                <p><strong>သင့်အတွက် Access Key:</strong></p>
-                <div class="key-box">
-                    <pre id="accessKeyText"></pre>
-                    <button id="copyBtn">Copy</button>
-                </div>
-            </div>
-        </section>
-        
         <section id="notes">
             <h2>⚠️ အရေးကြီးမှတ်ချက်</h2>
             <ul>
                 <li>မြန်မာနိုင်ငံမှ အသုံးပြုသူများအတွက်သာ ရည်ရွယ်ပါတယ်။</li>
                 <li>အခမဲ့မျှဝေခြင်းဖြစ်လို့ Data အများကြီးသုံးစွဲခြင်း (ဥပမာ - Torrent ဆွဲခြင်း) ကို ရှောင်ကြဉ်ပြီး အများသုံးနိုင်အောင် ကူညီပေးကြပါ။</li>
-                <li>Key များသည် data limit ရှိနိုင်သလို၊ အချိန်ကြာလာလျှင် အလုပ်မလုပ်တော့သည်များလည်း ရှိနိုင်ပါသည်။ အဆင်မပြေပါက နောက်တစ်ကြိမ် Key အသစ်ပြန်ယူနိုင်ပါတယ်။</li>
             </ul>
         </section>
 
@@ -82,7 +66,5 @@
             <p>လွတ်လပ်ပြီး လုံခြုံတဲ့ အင်တာနက်ကို အားလုံးအသုံးပြုနိုင်ဖို့ အချင်းချင်းကူညီမျှဝေကြရအောင်။ ❤️</p>
         </footer>
     </div>
-
-    <script src="script.js"></script>
-</body>
+    </body>
 </html>
